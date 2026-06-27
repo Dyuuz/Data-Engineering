@@ -15,3 +15,6 @@ df.show()
 
 # Transformation: filter purchases
 purchases = df.filter(df.event == "purchase")
+
+# Transformation: aggregate revenue
+result = purchases.groupBy("user_id").sum("amount")
