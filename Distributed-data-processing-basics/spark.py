@@ -12,3 +12,6 @@ df = spark.createDataFrame(data, ["user_id", "event", "amount"])
 
 # Action: show dataframe
 df.show()
+
+# Transformation: filter purchases
+purchases = df.filter(df.event == "purchase")
